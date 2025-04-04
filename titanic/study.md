@@ -7,6 +7,8 @@
 >
 > 너다나비 할 때 깨달은 점인데, 여태까지는 열이 많은 데이터셋을 많이 다루어보지 않아서 변수간 상관관계를 한 눈에 파악할 수 있는 히트맵을 잘 사용하지 않았다. 그런데, 최근 변수가 많은 데이터셋을 많이 접하게 되면서 히트맵의 중요성을 알게 되었다.
 
+---
+
 ## seaborn.plot을 통한 변수 간 관계 시각화
 
 <p align="center">
@@ -25,6 +27,8 @@ g.set(xticklabels=[])
 > 6 g.set(xticklabels=[]) x축 눈금 제거(깔끔하게 보이기 위해)
 >
 >![alt text](image-1.png)
+
+---
 
 ## 모델 특성 정리
 
@@ -51,8 +55,10 @@ g.set(xticklabels=[])
 > - 설명 : 고차원 공간에서 결정 경계를 찾는 모델로, 마진을 최대화하는 방향으로 학습
 > - 주요 파라미터 : C(마진 너비 vs 오차 허용 간의 균형), kernel(커널함수; linear, poly, rbf, sigmoid), gamma(rbf/poly 커널의 곡률 제어), degree(poly 커널의 차수)
 
-## 모델 간 비교
 ---
+
+## 모델 간 비교
+
 ### Random Forest vs Extra Trees
 |항목|Random Forest|Extra Trees|
 |---|---|---|
