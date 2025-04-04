@@ -30,3 +30,17 @@ g.set(xticklabels=[])
 > 6 g.set(xticklabels=[]) x축 눈금 제거(깔끔하게 보이기 위해)
 >
 >![alt text](image-1.png)
+
+## 모델 특성 정리
+
+> #### 랜덤포레스트
+>
+> - 설명 : 여러 개의 decision tree를 무작위 feature와 데이터 샘플로 학습한 후 결과를 투표 or 평균해서 예측 
+>
+> - 장점 : 과적합에 강하고, 기본 성능이 안정적
+>
+> - 주요 파라미터 : n_estimators(트리개수), max_depth(트리 최대 깊이), max_features(각 트리에서 고려할 feature 수), min_samples_split(리프노드가 되기 위한 최소 샘플 수), bootstrap(부트스트랩 샘플링 사용 여부)
+
+> #### Extra Trees(Extremely Randomized Trees)
+> - 설명 : 노드 분할 시 가장 좋은 분할을 찾는 대신 **완전히 무작위**로 나눔
+> - 장점 : random forest보다 더 빠르고 더 높은 편향, 더 낮은 분산
