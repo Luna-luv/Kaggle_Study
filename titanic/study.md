@@ -92,9 +92,7 @@ g.set(xticklabels=[])
 
 # from members' code
 
-## 세범's code
-
-> ### seaborn.catplot
+## seaborn.catplot
 >
 >- 범주형 변수(categorical data)를 시각화할 수 있는 **범용 함수**
 >- 내부적으로 `stripplot`, `boxplot`, `violinplot`, `barplot`, `pointplot` 등을 선택해서 그림
@@ -143,5 +141,3 @@ g.set(xticklabels=[])
 >> ![alt text](image-6.png)
 
 ---
-
-## 선희's code
