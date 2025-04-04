@@ -86,3 +86,59 @@ g.set(xticklabels=[])
 |스케일 영향|민감함 (정규화 필수)|거의 없음|
 |고차원 데이터|잘 작동함|차원의 저주에 영향받을 수 있음|
 |속도/확장성|데이터 커지면 느려짐|병렬 처리 가능, 확장성 높음|
+
+
+---
+
+# from members' code
+
+## 세범's code
+
+> ### seaborn.catplot
+>
+>- 범주형 변수(categorical data)를 시각화할 수 있는 **범용 함수**
+>- 내부적으로 `stripplot`, `boxplot`, `violinplot`, `barplot`, `pointplot` 등을 선택해서 그림
+>- 여러 범주를 비교할 때 **행/열 분할(grid)** 도 가능
+>- `FacetGrid` 객체 반환 → 여러 subplot 자동 생성 가능
+
+---
+
+> ### 주요 파라미터
+>
+>| 파라미터 | 설명 |
+|----------|------|
+| `x`, `y` | 축에 사용할 변수 이름 |
+| `hue` | 색상으로 나눌 카테고리 변수 |
+| `kind` | 사용할 플롯 종류 (`strip`, `swarm`, `box`, `violin`, `bar`, `point`, `count`) |
+| `col`, `row` | subplot으로 나눌 기준 변수 |
+| `data` | 사용할 데이터프레임 |
+| `order`, `hue_order` | x축과 hue 순서 지정 |
+| `height` | subplot 높이 (기본값: 5) |
+| `aspect` | subplot 가로/세로 비율 (기본값: 1) |
+
+---
+
+> ### ✅ kind별 기능 비교
+>
+>| kind 종류 | 설명 |
+|-----------|------|
+| `'strip'` | 산점도처럼 개별 포인트 보여줌 (중복 많을 땐 겹침) |
+| `'swarm'` | 겹치지 않게 퍼뜨린 점 플롯 (많은 데이터 시 느림) |
+| `'box'` | 박스플롯: 중앙값, 사분위수 등 통계 정보 표시 |
+| `'violin'` | 바이올린 플롯: boxplot + KDE |
+| `'bar'` | 평균값 + 신뢰구간을 막대로 표시 |
+| `'point'` | 평균값 + 신뢰구간을 선으로 표시 |
+| `'count'` | 각 카테고리의 개수를 막대로 표시 (y 생략 시 자동) |
+
+---
+
+> ### 그래프 예시
+>
+> 1) violin(boxplot + KDE)
+> ![alt text](image-4.png)
+
+> 2) point
+> ![alt text](image-5.png)
+
+> 3) bar
+> ![alt text](image-6.png)
