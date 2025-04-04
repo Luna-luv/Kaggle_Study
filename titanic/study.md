@@ -101,11 +101,9 @@ g.set(xticklabels=[])
 >- 여러 범주를 비교할 때 **행/열 분할(grid)** 도 가능
 >- `FacetGrid` 객체 반환 → 여러 subplot 자동 생성 가능
 
----
-
-> ### 주요 파라미터
->
->| 파라미터 | 설명 |
+>> ### 주요 파라미터
+>>
+| 파라미터 | 설명 |
 |----------|------|
 | `x`, `y` | 축에 사용할 변수 이름 |
 | `hue` | 색상으로 나눌 카테고리 변수 |
@@ -118,9 +116,9 @@ g.set(xticklabels=[])
 
 ---
 
-> ### ✅ kind별 기능 비교
->
->| kind 종류 | 설명 |
+>> ### kind별 기능 비교
+>>
+| kind 종류 | 설명 |
 |-----------|------|
 | `'strip'` | 산점도처럼 개별 포인트 보여줌 (중복 많을 땐 겹침) |
 | `'swarm'` | 겹치지 않게 퍼뜨린 점 플롯 (많은 데이터 시 느림) |
@@ -132,13 +130,16 @@ g.set(xticklabels=[])
 
 ---
 
-> ### 그래프 예시
->
-> 1) violin(boxplot + KDE)
-> ![alt text](image-4.png)
+>> ### 그래프 예시
+>>
+>> 1) violin(boxplot + KDE)
+>>
+>> ![alt text](image-4.png)
 
-> 2) point
-> ![alt text](image-5.png)
+>> 2) point
+>>
+>> ![alt text](image-5.png)
 
-> 3) bar
-> ![alt text](image-6.png)
+>> 3) bar
+>>
+>> ![alt text](image-6.png)
