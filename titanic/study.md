@@ -100,7 +100,7 @@ g.set(xticklabels=[])
 >- 내부적으로 `stripplot`, `boxplot`, `violinplot`, `barplot`, `pointplot` 등을 선택해서 그림
 >- 여러 범주를 비교할 때 **행/열 분할(grid)** 도 가능
 >- `FacetGrid` 객체 반환 → 여러 subplot 자동 생성 가능
-
+>
 >> ### 주요 파라미터
 >>
 | 파라미터 | 설명 |
@@ -113,8 +113,6 @@ g.set(xticklabels=[])
 | `order`, `hue_order` | x축과 hue 순서 지정 |
 | `height` | subplot 높이 (기본값: 5) |
 | `aspect` | subplot 가로/세로 비율 (기본값: 1) |
-
----
 
 >> ### kind별 기능 비교
 >>
@@ -143,3 +141,7 @@ g.set(xticklabels=[])
 >> 3) bar
 >>
 >> ![alt text](image-6.png)
+
+---
+
+## 선희's code
