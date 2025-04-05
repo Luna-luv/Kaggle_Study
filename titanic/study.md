@@ -1,9 +1,4 @@
-git add titanic/image/image.png
-git commit
-git push
-
 # from my code
-
 
 ## 변수 간 상관관계 파악
 
