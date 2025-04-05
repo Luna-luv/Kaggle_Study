@@ -92,14 +92,16 @@ g.set(xticklabels=[])
 
 # from members' code
 
-## seaborn.catplot
+## Seaborn 라이브러리리
+
+### 1. seaborn.catplot
 >
 >- 범주형 변수(categorical data)를 시각화할 수 있는 **범용 함수**
 >- 내부적으로 `stripplot`, `boxplot`, `violinplot`, `barplot`, `pointplot` 등을 선택해서 그림
 >- 여러 범주를 비교할 때 **행/열 분할(grid)** 도 가능
 >- `FacetGrid` 객체 반환 → 여러 subplot 자동 생성 가능
 >
->> ### 주요 파라미터
+>> #### 주요 파라미터
 >>
 | 파라미터 | 설명 |
 |----------|------|
@@ -111,8 +113,8 @@ g.set(xticklabels=[])
 | `order`, `hue_order` | x축과 hue 순서 지정 |
 | `height` | subplot 높이 (기본값: 5) |
 | `aspect` | subplot 가로/세로 비율 (기본값: 1) |
-
->> ### kind별 기능 비교
+>>
+>> #### kind별 기능 비교
 >>
 | kind 종류 | 설명 |
 |-----------|------|
@@ -123,21 +125,61 @@ g.set(xticklabels=[])
 | `'bar'` | 평균값 + 신뢰구간을 막대로 표시 |
 | `'point'` | 평균값 + 신뢰구간을 선으로 표시 |
 | `'count'` | 각 카테고리의 개수를 막대로 표시 (y 생략 시 자동) |
-
+>>
 ---
-
->> ### 그래프 예시
+>>
+>> #### 그래프 예시
 >>
 >> 1) violin(boxplot + KDE)
 >>
 >> ![alt text](image-4.png)
-
+>>
 >> 2) point
 >>
->> ![alt text](image-5.png)
-
+>> ![alt text](image-13.png)
+>>
 >> 3) bar
 >>
->> ![alt text](image-6.png)
+>> ![alt text](image-12.png)
 
 ---
+
+### 2. seaborn.facetgrid
+
+> - `FacetGrid`는 하나 이상의 범주형 변수를 기준으로 데이터를 **그룹별로 나눠 서브플롯**으로 시각화
+> - 각 서브플롯은 **동일한 축과 스케일**을 공유하여 **비교 분석**에 효과적이며, `.map()`을 통해 다양한 플롯을 유연하게 적용할 수 있습니다.
+>
+>> #### 주요 파라미터
+>>
+| 파라미터        | 설명                                      |
+|------------------|-------------------------------------------|
+| `data`           | 시각화할 데이터프레임                      |
+| `col`            | 서브플롯을 열 방향으로 나눌 변수           |
+| `row`            | 서브플롯을 행 방향으로 나눌 변수           |
+| `hue`            | 색상을 기준으로 나눌 범주형 변수           |
+| `margin_titles`  | 제목을 subplot 안쪽에 넣을지 여부 (기본: `False`) |
+| `height`         | 각 subplot의 높이 (기본: `3`)              |
+| `aspect`         | subplot의 가로/세로 비율 (기본: `1`)       |
+>>
+>> #### 자주 사용하는 지원 플롯
+>>
+| 지원 플롯         | 설명                        |
+|--------------------|-----------------------------|
+| `sns.histplot`     | 히스토그램 (분포 확인)       |
+| `sns.scatterplot`  | 산점도 (관계 시각화)         |
+| `sns.barplot`      | 막대그래프 (평균 등 비교용)  |
+>>
+---
+>> #### 그래프 예시
+>>
+>> 1) hisplot
+>>
+>>![alt text](image-9.png)
+>>
+>> 2) pointplot
+>>
+>>![alt text](image-10.png)
+>>
+>> 3) barplot
+>>
+>>![alt text](image-11.png)
