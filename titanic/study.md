@@ -1,9 +1,13 @@
+git add titanic/image/image.png
+git commit
+git push
+
 # from my code
 
 
 ## 변수 간 상관관계 파악
 
->![상관관계](titanic/image/image.png)
+>![상관관계](https://vscode.dev/github.com/Luna-luv/Kaggle_Study/blob/main/titanic/image/image.png#L5)
 >
 > 너다나비 할 때 깨달은 점인데, 여태까지는 열이 많은 데이터셋을 많이 다루어보지 않아서 변수간 상관관계를 한 눈에 파악할 수 있는 히트맵을 잘 사용하지 않았다. 그런데, 최근 변수가 많은 데이터셋을 많이 접하게 되면서 히트맵의 중요성을 알게 되었다.
 
