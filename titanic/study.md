@@ -7,13 +7,13 @@ git push
 
 ## 변수 간 상관관계 파악
 
->![상관관계](https://vscode.dev/github.com/Luna-luv/Kaggle_Study/blob/main/titanic/image/image.png#L5)
+>![상관관계](https://github.com/Luna-luv/Kaggle_Study/blob/main/titanic/image/image.png?raw=true)
 >
 > 너다나비 할 때 깨달은 점인데, 여태까지는 열이 많은 데이터셋을 많이 다루어보지 않아서 변수간 상관관계를 한 눈에 파악할 수 있는 히트맵을 잘 사용하지 않았다. 그런데, 최근 변수가 많은 데이터셋을 많이 접하게 되면서 히트맵의 중요성을 알게 되었다.
 
 ---
 
-## seaborn.plot을 통한 변수 간 관계 시각화
+## seaborn.pairplot을 통한 변수 간 관계 시각화
 
 <p align="center">
 <pre><code class="language-python">
@@ -30,7 +30,7 @@ g.set(xticklabels=[])
 > 5 plot_kws=dict(s=10) : 산점도의 점 크기 조절
 > 6 g.set(xticklabels=[]) x축 눈금 제거(깔끔하게 보이기 위해)
 >
->![alt text](image-1.png)
+>![pairplot](https://github.com/Luna-luv/Kaggle_Study/blob/main/titanic/image/image-1.png?raw=true)
 
 ---
 
@@ -136,15 +136,15 @@ g.set(xticklabels=[])
 >>
 >> 1) violin(boxplot + KDE)
 >>
->> ![alt text](image-4.png)
+>> ![violin](https://github.com/Luna-luv/Kaggle_Study/blob/main/titanic/image/image-4.png?raw=true)
 >>
 >> 2) point
 >>
->> ![alt text](image-13.png)
+>> ![point](https://github.com/Luna-luv/Kaggle_Study/blob/main/titanic/image/image-13.png?raw=true)
 >>
 >> 3) bar
 >>
->> ![alt text](image-12.png)
+>> ![bar](https://github.com/Luna-luv/Kaggle_Study/blob/main/titanic/image/image-12.png?raw=true)
 
 ---
 
@@ -178,15 +178,15 @@ g.set(xticklabels=[])
 >>
 >> 1) hisplot
 >>
->>![alt text](image-9.png)
+>>![hisplot](https://github.com/Luna-luv/Kaggle_Study/blob/main/titanic/image/image-9.png?raw=true)
 >>
 >> 2) pointplot
 >>
->>![alt text](image-10.png)
+>>![pointplot](https://github.com/Luna-luv/Kaggle_Study/blob/main/titanic/image/image-10.png?raw=true)
 >>
 >> 3) barplot
 >>
->>![alt text](image-11.png)
+>>![barplot](https://github.com/Luna-luv/Kaggle_Study/blob/main/titanic/image/image-10.png?raw=true)
 
 ---
 
