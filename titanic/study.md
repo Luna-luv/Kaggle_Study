@@ -19,10 +19,15 @@ g.set(xticklabels=[])
 </p>
 
 > 1 pairplot() : 여러 수치형 변수 간 산점도, 분포도, 관계 시각화
+>
 > 2 hue = 변수명 : 생존 여부에 따라 색 구분
+>
 > 3 diag_king = 'kde' : diag_king(대각선 diagnol kind을 뜻하고, kde는 변수 밀도곡선을 의미) -> 대각선에는 밀도 추정 곡선 표시한다는 것
+>
 > 4 palette = 'seismic' : 생존/사망 색상을 seismic 컬러맵으로 설정
+>
 > 5 plot_kws=dict(s=10) : 산점도의 점 크기 조절
+>
 > 6 g.set(xticklabels=[]) x축 눈금 제거(깔끔하게 보이기 위해)
 >
 >![pairplot](https://github.com/Luna-luv/Kaggle_Study/blob/main/titanic/image/image-1.png?raw=true)
@@ -185,7 +190,7 @@ g.set(xticklabels=[])
 
 ---
 
-## 라이브러리별 시각화 사용 용도 비교
+## 시각화 도구별 사용 용도 비교
 
 ### `subplot` vs `FacetGrid` vs `catplot` 
 
