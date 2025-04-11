@@ -44,7 +44,33 @@ url : https://www.kaggle.com/code/anubhavgoyal10/airline-passenger-satisfaction-
 🔍 MinMaxScaler : 0~1 범위로 변환
 ```
 
+### K Nearest Neighbors 실제 활용
+```python
+knn = KNeighborsClassifier(n_neighbors=i)
+score = cross_val_score(knn, X_train, y_train, cv=5, scoring = ' ')
+' '.append(score.mean())
+```
 
+![alt text](image.png)
+
+scoring 의 종류
+| scoring 이름               | 의미                                                        |
+|----------------------------|-------------------------------------------------------------|
+| `accuracy`               | 정확도 (전체 정답 비율) = **(TP+TN)/(TP+FN+FP+TN)**              |
+| `precision`              | 정밀도 (P로 예측한 것 중 실제 P 비율) = **TP/(TP+FP)**        |
+| `recall`                 | 재현율 (실제 P 중 맞힌 비율) = **TP/(TP+FN)**                        |
+| `f1`                     | F1 점수 (precision과 recall의 조화 평균) = **2/Precision+2/Recall**        |
+| `roc_auc`                | ROC AUC (이진 분류 확률 기반 평가지표)                      |
+| `neg_log_loss`          | 로그 손실 (작을수록 좋음, 값은 음수로 나옴)                |
+| `neg_mean_squared_error`| 회귀용: 평균 제곱 오차 (작을수록 좋음, 값은 음수로 나옴)    |
+
+*How specific the model is in not detecting fire when there is no fire*
+- Type 1 error = FP Rate(1-specificity) = FP/(FP+TN)
+
+*How sensitive the model is working in detecting fire when there is fire*
+- Type 2 error = FN Rate(1-sensitivity=1-recall) = FN/(TP+FN)
+
+---
 
 ## inplace = True
 기능 : 원본 데이터에 수정사항 바로 덮어쓰기 할 수 있음
@@ -55,3 +81,35 @@ url : https://www.kaggle.com/code/anubhavgoyal10/airline-passenger-satisfaction-
 
 >**사용 불가능**한 상황
 - 원본 데이터에서 몇 개의 행/열을 뽑아 수정할 경우
+
+
+# from members' code
+
+## object vs category
+| 구분         | object                            | category                                  |
+|--------------|-----------------------------------|--------------------------------------------|
+| 의미         | 일반적인 문자열 데이터 타입       | 범주형 데이터 전용 타입                    |
+| 메모리/속도  | 메모리 많이 사용, 처리 속도 느림 | 메모리 적게 사용, 연산 속도 빠름        |
+| 내부 표현    | 문자열 그대로 저장                | 정수(label)로 인코딩                      |
+| 정렬/순서    | 문자열 기준 정렬                  | 순서 지정 가능 (`ordered=True`)         |
+| 문자열 처리  | ✅ `.str` 메서드 등으로 자유로움 | ❌ 문자열 처리 제한적                      |
+| 사용 추천 상황 | 텍스트 분석, 단어 비교 등 필요할 때 | 클래스/범주형 변수 처리, 분석/시각화 시 적합 |
+
+---
+
+## 상삼각행렬을 쓰는 이유
+- 중복 제거
+- 시각화 간소화
+- 불필요한 정보 감춤(상, 하 완전히 일치하니)
+- 표/리포트 작성시 효율적
+```
+그럼 난 히트맵 시각화할 때 상삼각 이용해서 봐야겠다~!
+```
+```python
+# 기존상관행렬 시각화 예시
+sns.heatmap(corr_matrix, mask=mask)
+
+# 상삼각행렬 시각화 예시(low를 가려서 upper만 남기기)
+mask=np.tril(np.ones_like(corr, dtype=bool))
+```
+![alt text](image-1.png)
