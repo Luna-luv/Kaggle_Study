@@ -72,3 +72,7 @@ sns.regplot(x=numeric_train['MoSold'], y='SalePrice', data=numeric_train, ax=axe
 
 - 연속형 변수 간 상관관계 시각화여서 산점도가 고르게 퍼져있음
 - 두 변수는 양의 상관관계를 가짐
+
+---
+
+## StandardScaler vs MinMaxScaler vs RobustScaler
