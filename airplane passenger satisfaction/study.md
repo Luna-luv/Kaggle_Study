@@ -51,7 +51,7 @@ score = cross_val_score(knn, X_train, y_train, cv=5, scoring = ' ')
 ' '.append(score.mean())
 ```
 
-![alt text](image.png)
+![confusion matrix](https://github.com/Luna-luv/Kaggle_Study/blob/main/airplane%20passenger%20satisfaction/image.png?raw=true)
 
 scoring 의 종류
 | scoring 이름               | 의미                                                        |
@@ -118,7 +118,7 @@ sns.heatmap(corr_matrix, mask=mask)
 # 상삼각행렬 시각화 예시(low를 가려서 upper만 남기기)
 mask=np.tril(np.ones_like(corr, dtype=bool))
 ```
-![alt text](image-1.png)
+![상삼각행렬 히트맵](https://github.com/Luna-luv/Kaggle_Study/blob/main/airplane%20passenger%20satisfaction/image-1.png?raw=true)
 
 ---
 
@@ -135,7 +135,7 @@ mask=np.tril(np.ones_like(corr, dtype=bool))
 ```python
 sns.histplot(data, x = 'Age', hue = 'Class', multiple = 'stack', palette = 'YlOrBr', edgecolor = '.3', linewidth  = .5, ax = ax[1])
 ```
-![alt text](image-4.png)
+![histplot 누적](https://github.com/Luna-luv/Kaggle_Study/blob/main/airplane%20passenger%20satisfaction/image-4.png?raw=true)
 
 ---
 
@@ -184,7 +184,7 @@ def data_explore(df):
 ```
 ### 결과 예시
 
-![alt text](image-6.png)
+![사용자정의함수의 활용](https://github.com/Luna-luv/Kaggle_Study/blob/main/airplane%20passenger%20satisfaction/image-6.png?raw=true)
 
 ```
 한 번에 비교하기 편할듯 하다! 나도 써먹어야지
@@ -200,7 +200,7 @@ xerr 의 기능 : 막대에 오차막대 포함
 
 ### 그래프 예시
 
-![alt text](image-7.png)
+![오차포함막대그래프](https://github.com/Luna-luv/Kaggle_Study/blob/main/airplane%20passenger%20satisfaction/image-7.png?raw=true)
 
 - 막대 그래프 끝 검은 부분이 오차 범위 표시한 것임
 
